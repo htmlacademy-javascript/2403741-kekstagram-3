@@ -65,14 +65,14 @@ const mockDateGenerator = (mockDateQuantity) => {
   const generateRandomComments = (commentsQuantity) =>
     Array.from({ length: commentsQuantity }, (item, idx) => ({
       id: idx,
-      avatar: `img/avatar-{{ ${generateRandomNumber(1, 6)} }}.svg`,
+      avatar: `img/avatar-${generateRandomNumber(1, 6)}.svg`,
       message: getRandomMessage(),
       name: generateRandomName()
     }));
 
   return Array.from({ length: mockDateQuantity }, (item, idx) => ({
     id: idx + 1,
-    url: `photos/{{${idx + 1}}}.jpg`,
+    url: `photos/${idx + 1}.jpg`,
     description: `Картинка № ${idx + 1}`,
     likes: generateRandomNumber(15, 200),
     comments: generateRandomComments(generateRandomNumber(0, 30))
