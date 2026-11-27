@@ -2,6 +2,7 @@ import { isEscapeKey } from './utils.js';
 import { COMMENTS_DISPLAY, commentConfig } from './configs.js';
 import { createCommentsFragment } from './create-comments-fragment.js';
 
+// Функция создает полноэкранный экран
 function createFullscreen(fullScreenElem, {
   url,
   description,
